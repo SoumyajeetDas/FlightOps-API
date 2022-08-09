@@ -5,7 +5,7 @@ const Triage = require('../models/triageModel')
 exports.getAllTriage = async (req, res, next) => {
 
 
-    const triageData = await Triage.find();
+    const triageData = await Triage.find().sort({name:1});
 
 
     try {
