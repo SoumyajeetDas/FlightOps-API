@@ -29,7 +29,7 @@ mongoose.connect(connectionString).then(()=>{
 
 
 // Configuring port number
-let port = process.env.NODE_ENV==='production'? process.env.PORT||4000:3000;
+let port = process.env.NODE_ENV==='production'? process.env.PORT||5000:6000;
 
 
 app.listen(port,()=>{
