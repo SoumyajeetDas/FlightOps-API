@@ -20,7 +20,7 @@ exports.getAllTriage = async (req, res, next) => {
     catch(err){
         res.status(500).send({
             status: '500 Internal Server Error',
-            message:err
+            message:err.message
         })
     }
 
