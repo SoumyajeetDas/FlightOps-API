@@ -3,6 +3,7 @@ const triageController = require('../controllers/triageController');
 const opsCentralController = require('../controllers/opsCentralController')
 const appInsightController = require('../controllers/appInsightController')
 const pathController = require('../controllers/pathController')
+const dbQueryController = require('../controllers/dbQueryController')
 
 const router = express.Router();
 
@@ -26,5 +27,11 @@ router
 // Router for Path
 router
 .get("/paths",pathController.getAllPaths)
+
+
+// Router for Informix DB Query
+router
+.get("/dbQuery",dbQueryController.getAllDBQuery)
+
 
 module.exports = router;
