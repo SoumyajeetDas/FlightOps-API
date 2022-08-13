@@ -5,6 +5,8 @@ const appInsightController = require('../controllers/appInsightController')
 const pathController = require('../controllers/pathController')
 const dbQueryController = require('../controllers/dbQueryController')
 const criticalSystemController = require('../controllers/criticalSystemController')
+const mySumoController = require('../controllers/mySumoController')
+
 
 const router = express.Router();
 
@@ -39,6 +41,13 @@ router
 // Router for Critical System
 router
 .get("/criticalsystem",criticalSystemController.getallCriticalSystem)
+
+
+
+
+// Router for My Sumo Query
+router
+.get("/mysumoquery",mySumoController.getAllmySumoQueries)
 
 
 
