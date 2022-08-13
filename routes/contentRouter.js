@@ -4,6 +4,7 @@ const opsCentralController = require('../controllers/opsCentralController')
 const appInsightController = require('../controllers/appInsightController')
 const pathController = require('../controllers/pathController')
 const dbQueryController = require('../controllers/dbQueryController')
+const criticalSystemController = require('../controllers/criticalSystemController')
 
 const router = express.Router();
 
@@ -32,6 +33,13 @@ router
 // Router for Informix DB Query
 router
 .get("/dbQuery",dbQueryController.getAllDBQuery)
+
+
+
+// Router for Critical System
+router
+.get("/criticalsystem",criticalSystemController.getallCriticalSystem)
+
 
 
 module.exports = router;
