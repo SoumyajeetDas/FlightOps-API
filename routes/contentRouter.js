@@ -6,6 +6,7 @@ const pathController = require('../controllers/pathController')
 const dbQueryController = require('../controllers/dbQueryController')
 const criticalSystemController = require('../controllers/criticalSystemController')
 const mySumoController = require('../controllers/mySumoController')
+const adSumoController = require('../controllers/adSumoController')
 
 
 const router = express.Router();
@@ -47,7 +48,13 @@ router
 
 // Router for My Sumo Query
 router
-.get("/mysumoquery",mySumoController.getAllmySumoQueries)
+.get("/mysumoquery",mySumoController.getAllmySumoQueries);
+
+
+
+// Router for Adele Sumo
+router
+.get("/adelesumoquery",adSumoController.getallAdeleSumo)
 
 
 
