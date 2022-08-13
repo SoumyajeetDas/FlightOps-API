@@ -10,7 +10,7 @@ const criticalSystemSchema = new mongoose.Schema({
     path: {
         type: String,
         required: [true, "Please enter the path"],
-        trim:true,
+        trim: true,
         unique: true
     },
     smes: {
@@ -25,7 +25,7 @@ const criticalSystemSchema = new mongoose.Schema({
 
 
 
-const CriticalSystem = mongoose.model('criticalsystems',criticalSystemSchema);
+const CriticalSystem = mongoose.model('criticalsystems', criticalSystemSchema);
 
 
 

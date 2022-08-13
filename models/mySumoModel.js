@@ -8,12 +8,16 @@ const mySumoSchema = new mongoose.Schema({
     },
     name: {
         type: String,
+        required: [true, "Please enter a name"],
         unique: true
     },
 
     // search:mongoose.Schema.Types.Mixed,
     search: {
-        queryText: String,
+        queryText: {
+            type: String,
+            required: [true, "Please enter the queryText"]
+        },
         defaultTimeRange: String,
         byReceiptTime: {
             type: Boolean,

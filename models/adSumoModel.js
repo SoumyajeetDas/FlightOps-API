@@ -12,8 +12,12 @@ const adSumoSchema = new mongoose.Schema({
     },
 
     // search:mongoose.Schema.Types.Mixed,
+    // search:mongoose.Schema.Types.Mixed,
     search: {
-        queryText: String,
+        queryText: {
+            type: String,
+            required: [true, "Please enter the queryText"]
+        },
         defaultTimeRange: String,
         byReceiptTime: {
             type: Boolean,
