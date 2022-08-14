@@ -6,7 +6,7 @@ const cors = require('cors')
 
 
 app.use(cors({
-    origin:'https://main--bejewelled-longma-891e99.netlify.app'
+    origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000']
 }));
 
 
