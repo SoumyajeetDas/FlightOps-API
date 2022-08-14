@@ -191,26 +191,50 @@ const insertTriage = async () => {
 }
 
 if (process.argv[2] === '--insertMySumo') {
+
+    //  node scripts/script.js --insertMySumo     
+
     insertMySumo();
 }
 else if (process.argv[2] === '--adeleSumo') {
+
+    // node scripts/script.js --adeleSumo   
+
     adeleSumo();
 }
 else if (process.argv[2] === '--insertAppInsight') {
+
+    // node scripts/script.js --insertAppInsight   
+
     insertAppInsight();
 }
 else if (process.argv[2] === '--insertInformixQuery') {
+
+    // node scripts/script.js --insertInformixQuery
+
     insertDBQuery();
 }
 else if (process.argv[2] === '--insertPath') {
+
+    // node scripts/script.js --insertPath
+
     insertPath();
 }
 else if (process.argv[2] === '--insertCriticalSystem') {
+
+    // node scripts/script.js --insertCriticalSystem
+
     insertCriticalSystem();
 }
 else if (process.argv[2] === '--insertOpsCentral') {
+
+    // node scripts/script.js --insertOpsCentral 
+
     insertOpsCentral();
 }
 else if (process.argv[2] === '--insertTriage') {
+
+    // node scripts/script.js --insertTriage
+    
     insertTriage();
 }

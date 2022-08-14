@@ -8,6 +8,9 @@ const cors = require('cors')
 app.use(cors({
     origin:'https://main--bejewelled-longma-891e99.netlify.app'
 }));
+
+
+
 app.use("/api/v1/fops/contents",contentRouter)
 
 
