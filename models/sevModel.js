@@ -8,15 +8,10 @@ const sevSchema = new mongoose.Schema({
         unique:true
     },
     tickNos: {
-        type: [Number],
-        // required:[true, "Please enter the path"]
+        type: String,
 
-        validate: {
-            validator: function (val) {
-                return Array.isArray(val) && val.length > 0
-            },
-            message: "Please enter the Ticket Nos.",
-        }
+        required:[true,"Please enter the Ticket No."]
+      
     },
     applications:{
         type:String,
