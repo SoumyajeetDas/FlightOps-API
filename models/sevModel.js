@@ -8,8 +8,13 @@ const sevSchema = new mongoose.Schema({
         unique:true
     },
     tickNos: {
-        type: Number,
-        required:[true,"Please enter the Ticket No."],
+        type: String,
+        required:[true,"Please enter the Ticket No. or keep as N/A"],
+        unique:true
+    },
+    miNos:{
+        type: String,
+        required:[true,"Please enter the MI No. or keep as N/A"],
         unique:true
     },
     applications:{
