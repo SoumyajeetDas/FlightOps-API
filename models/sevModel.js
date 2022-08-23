@@ -35,7 +35,6 @@ const sevSchema = new mongoose.Schema({
     description:String,
     link:{
         type:String,
-        required:[true, "Please enter the link"],
         trim:true
     }
 });
