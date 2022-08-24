@@ -10,12 +10,10 @@ const sevSchema = new mongoose.Schema({
     tickNos: {
         type: String,
         required:[true,"Please enter the Ticket No. or keep as N/A"],
-        unique:true
     },
     miNos:{
         type: String,
         required:[true,"Please enter the MI No. or keep as N/A"],
-        unique:true
     },
     applications:{
         type:String,
