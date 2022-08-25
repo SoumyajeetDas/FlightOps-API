@@ -5,7 +5,7 @@ exports.getSev = async (req, res) => {
     try {
         const sevData = await Sev.find().sort({ timeOccured: 1 });
 
-        if(sevData.length===0){
+        if (sevData.length === 0) {
             return res.status(400).send({
                 status: '400 Bad Request',
                 message: "No data to show"
@@ -55,10 +55,10 @@ exports.updateData = async (req, res) => {
 
 
     try {
-        
+
         const sevData = await Sev.findById(req.params.id);
 
-        if(!sevData){
+        if (!sevData) {
             return res.status(400).send({
                 status: '400 Bad Request',
                 message: "Severity Incident is not present"
@@ -92,7 +92,7 @@ exports.deleteData = async (req, res) => {
 
         const sevData = await Sev.findById(req.params.id);
 
-        if(!sevData){
+        if (!sevData) {
             return res.status(400).send({
                 status: '400 Bad Request',
                 message: "Severity Incident is not present"
@@ -103,7 +103,35 @@ exports.deleteData = async (req, res) => {
 
         res.status(200).send({
             status: '200 Ok',
-            message:"Data got deleted"
+            message: "Data got deleted"
+        });
+    }
+    catch (err) {
+        res.status(500).send({
+            status: '500 Internal Server Error',
+            message: err.message
+        })
+    }
+}
+
+
+exports.getStats = async (req, res) => {
+    try {
+        let data = await Sev.aggregate([
+            {
+                $group: {
+                    _id: '$applications',
+                    sumTotal: { $sum: 1 }
+                }
+            }
+        ]);
+
+        res.status(200).send({
+            status: '200 OK',
+            length: data.length,
+            data: {
+                stats: data
+            }
         });
     }
     catch (err) {

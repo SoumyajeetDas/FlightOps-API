@@ -20,4 +20,8 @@ router
 .delete(sevController.deleteData)
 
 
+// Get the Stats
+router.get("/stats",sevController.getStats);
+
+
 module.exports = router;
