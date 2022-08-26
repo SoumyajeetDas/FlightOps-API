@@ -123,6 +123,9 @@ exports.getStats = async (req, res) => {
                     _id: '$applications',
                     sumTotal: { $sum: 1 }
                 }
+            },
+            {
+                $sort:{_id:1}
             }
         ]);
 
