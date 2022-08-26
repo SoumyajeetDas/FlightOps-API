@@ -3,7 +3,7 @@ const Sev = require('../models/sevModel');
 
 exports.getSev = async (req, res) => {
     try {
-        const sevData = await Sev.find().sort({ timeOccured: 1 });
+        const sevData = await Sev.find().sort({ timeOccured: -1, title:1 });
 
         if (sevData.length === 0) {
             return res.status(400).send({
@@ -125,9 +125,16 @@ exports.getStats = async (req, res) => {
                 }
             },
             {
-                $sort:{_id:1}
+                $sort: { _id: 1 }
             }
         ]);
+
+        if (data.length === 0) {
+            return res.status(400).send({
+                status: '400 Bad Request',
+                message: "No data to show"
+            })
+        }
 
         res.status(200).send({
             status: '200 OK',
