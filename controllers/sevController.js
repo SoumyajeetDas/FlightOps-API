@@ -3,8 +3,6 @@ const Sev = require('../models/sevModel');
 
 exports.getSev = async (req, res) => {
     try {
-
-        // Sorting the data in descending order wrt timeOccured and ascending order with title
         const sevData = await Sev.find().sort({ timeOccured: -1, title:1 });
 
         if (sevData.length === 0) {
@@ -119,9 +117,6 @@ exports.deleteData = async (req, res) => {
 
 exports.getStats = async (req, res) => {
     try {
-
-        // First groupby with the application name and then find the total sum and then sort with respect to the application name.
-        // _id will have the application name.
         let data = await Sev.aggregate([
             {
                 $group: {

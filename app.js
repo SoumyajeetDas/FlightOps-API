@@ -8,14 +8,14 @@ const cors = require('cors')
 
 app.use(cors({
     origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000'],
-    // methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 
 // app.options('*',cors());
 
-app.options('*',cors({
-    origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000']
-})); 
+// app.options('*',cors({
+//     origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000']
+// })); 
 
 
 app.use("/api/v1/fops/contents",contentRouter)
