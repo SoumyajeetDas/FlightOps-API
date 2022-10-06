@@ -18,7 +18,7 @@ const sevSchema = new mongoose.Schema({
     applications:{
         type:String,
         required:[true,"Please enter the application type"],
-        enum:['ACARS','Aircraft Performance','FOGS','Jetplan','Pilot Briefing','QXEFB','S4A','VisOps', 'VisOps DB' ,'WAM', 'Weather', 'WebSendTimes', 'Related to other Team', 'Multiple System Down']
+        enum:['ACARS','Aircraft Performance','FOGS','Jetplan','Pilot Briefing','QXEFB','S4A','VisOps', 'VisOps DB' ,'WAM', 'Weather', 'WebSendTimes', 'Related to other Team', 'Multiple System Down','FlightEventsPublisherSvc']
     },
     ticketType:{
         type:String,
