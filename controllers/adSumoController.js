@@ -10,7 +10,7 @@ exports.getallAdeleSumo = async (req, res) => {
             status: '200 OK',
             length: adSumoData.length,
             data: {
-                adeleSumo: adSumoData
+                dbData: adSumoData
             }
         })
     }

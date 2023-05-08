@@ -11,7 +11,7 @@ exports.getAllAppInsight = async (req, res) => {
             status: '200 OK',
             length: appInsightData.length,
             data: {
-                appInsight: appInsightData
+                dbData: appInsightData
             }
         })
     }

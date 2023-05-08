@@ -11,7 +11,7 @@ exports.getAllPaths = async (req, res) => {
             status: '200 OK',
             length: pathData.length,
             data: {
-                path: pathData
+                dbData: pathData
             }
         });
     }

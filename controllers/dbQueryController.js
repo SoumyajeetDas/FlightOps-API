@@ -11,7 +11,7 @@ exports.getAllDBQuery = async (req, res) => {
             status: '200 OK',
             length: dbQueryData.length,
             data: {
-                dbQuery: dbQueryData
+                dbData: dbQueryData
             }
         })
     }

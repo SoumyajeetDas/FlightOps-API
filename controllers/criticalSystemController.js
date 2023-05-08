@@ -10,7 +10,7 @@ exports.getallCriticalSystem = async (req, res) => {
             status: '200 OK',
             length: criticalSystemData.length,
             data: {
-                criticalSystem: criticalSystemData
+                dbData: criticalSystemData
             }
         })
     }

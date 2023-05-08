@@ -13,7 +13,7 @@ exports.getAllTriage = async (req, res, next) => {
             status: '200 OK',
             length: triageData.length,
             data: {
-                triage: triageData
+                dbData: triageData
             }
         });
     }

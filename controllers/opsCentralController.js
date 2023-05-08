@@ -11,7 +11,7 @@ exports.getAllOpsCentral = async (req, res) => {
             status: '200 OK',
             length: opsCentralData.length,
             data: {
-                opsCentral: opsCentralData
+                dbData: opsCentralData
             }
         })
     }

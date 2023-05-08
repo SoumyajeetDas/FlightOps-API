@@ -11,7 +11,7 @@ exports.getAllmySumoQueries = async (req, res) => {
             status: '200 OK',
             length: mySumoQueryData.length,
             data: {
-                mySumoQuery: mySumoQueryData
+                dbData: mySumoQueryData
             }
         })
     }
