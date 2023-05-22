@@ -145,7 +145,7 @@ exports.getStats = async (req, res) => {
             status: '200 OK',
             length: data.length,
             data: {
-                stats: data
+                dbData: data
             }
         });
     }
