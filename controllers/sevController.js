@@ -130,7 +130,7 @@ exports.getStats = async (req, res) => {
                 }
             },
             {
-                $sort: { _id: 1 }
+                $sort: { sumTotal: -1 }
             }
         ]);
 
