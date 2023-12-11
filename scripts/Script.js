@@ -38,9 +38,9 @@ mongoose.connect(connectionString).then(() => {
 const insertMySumo = async () => {
     try {
         await MySumo.create({
-            name: "Testing",
+            name: "Amended Flight Release Sent to S4A TIBCO Logs",
             search: {
-                queryText: "dwdowdowjdowjdowd",
+                queryText: "_sourcecategory = \"Tibco_BW_Audit\" AND AMEND AND \"QX/2235/2023-12-10/PDX/BOI\" AND \"SENT-TO-SMARTLOAD\"",
                 defaultTimeRange: "-60m",
                 viewStartTime: "1970-01-01T00:00:00Z",
                 queryParameters: [],
