@@ -7,7 +7,7 @@ const cors = require('cors')
 
 
 app.use(cors({
-    origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000'],
+    origin: ['https://main--bejewelled-longma-891e99.netlify.app', 'http://localhost:3000', 'https://sumolibrary.netlify.app'],
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'] // This will allow CORS to be effective for all the route methods otherwise
                                                            // by default only for GET
 }));
